@@ -182,6 +182,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BAL\NavigationBal.cs" />
+    <Compile Include="BAL\sandeep.cs" />
     <Compile Include="BAL\UsersGroup.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
@@ -8363,6 +8364,7 @@
     <Folder Include="Scripts\Angular\AssetManagement\" />
     <Folder Include="Scripts\Angular\EmployeeManagement\" />
     <Folder Include="Scripts\Angular\Timesheet\" />
+    <Folder Include="Views\Default\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
   <ItemGroup>
