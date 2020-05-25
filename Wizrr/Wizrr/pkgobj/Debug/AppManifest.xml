@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="Wizrr" ProductID="{58678454-050e-4c8b-bed1-74e0738b5839}" Version="1.0.0.0" SharePointMinVersion="16.0.0.0">
+  <Properties>
+    <Title>Wizrr</Title>
+    <StartPage>https://localhost:44371/?{StandardTokens}</StartPage>
+  </Properties>
+  <AppPrincipal>
+    <AutoDeployedWebApplication>
+      <DebugInfo ClientSecret="oqom4FnYfhqFtQ1+2MQDEF5eVDtPg42VVPqVYvVOd1E=" AppUrl="https://localhost:44371/" />
+    </AutoDeployedWebApplication>
+  </AppPrincipal>
+  <AppPermissionRequests>
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="FullControl" />
+  </AppPermissionRequests>
+</App>

@@ -1,0 +1,5 @@
+E:\Hoested App\Wizrr\Wizrr\bin\Debug\Wizrr.dll.config
+E:\Hoested App\Wizrr\Wizrr\bin\Debug\Wizrr.pdb
+E:\Hoested App\Wizrr\Wizrr\obj\Debug\Wizrr.csprojAssemblyReference.cache
+E:\Hoested App\Wizrr\Wizrr\obj\Debug\Wizrr.dll
+E:\Hoested App\Wizrr\Wizrr\obj\Debug\Wizrr.pdb
