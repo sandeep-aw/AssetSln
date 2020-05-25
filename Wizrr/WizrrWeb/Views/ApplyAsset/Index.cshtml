@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Internal  Datetimepicker-slider css -->
+<link href="~/assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet" />
+
+<!-- Internal Select2 css -->
+<link href="~/assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+<link href="~/assets/css/style.css" rel="stylesheet">
+
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Asset Management</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Apply For Asset</span>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb -->
+<!-- row -->
+<div class="row" ng-app="ApplyAssetapp" ng-controller="ApplyAssetController">
+    <div class="col-xl-12 col-lg-12">
+
+
+        <!--Entry Code start-->
+        <div class="card custom-card">
+            <div class="card-body">
+                <div class="card-body pt-0">
+                    <div class="">
+                        <div class="row row-sm">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="First_Name">Employee Name</label>
+                                    <input type="text" class="form-control" id="First_Name" placeholder="Enter Employee Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Asset</label>
+
+                                <select class="form-control select2">
+                                    <option label="Choose one">
+                                    </option>
+                                    @foreach (var j in ViewBag.AssetArr)
+                                    {
+                                        <option value="@j.ID">
+                                            @j.Assets
+                                        </option>
+                                    }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row row-sm">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Asset Type</label>
+                                    <select class="form-control select2">
+                                        <option label="Choose one">
+                                        </option>
+                                        <option value="Firefox">
+                                            ThinkPad X1 Carbon [6]
+                                        </option>
+                                        <option value="Chrome">
+                                            MacBook [7]
+                                        </option>
+                                        <option value="Safari">
+                                            HP C300 17'Touch screen [10]
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="First_Name">Asset Count</label>
+                                    <input type="text" class="form-control" id="First_Name" placeholder="Enter Employee Name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row row-sm">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Request Date</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                                            </div>
+                                        </div><input class="form-control" id="datetimepicker" type="text" value="2018-12-20 21:05">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Return Date</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <script src="~/assets/js/form-elements.js"></script>
+                                                <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
+                                            </div>
+                                        </div><input class="form-control" id="datetimepicker1" type="text" value="2018-12-20 21:05">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row row-sm">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="txtDescription">Reason To Apply</label>
+                                    <textarea class="form-control" ng-model="ngtxtDescription" id="txtDescription" placeholder="Enter Description" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="txtDescription">Asset Details</label>
+                                    <textarea class="form-control" ng-model="ngtxtDescription" id="txtDescription" placeholder="Enter Description" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row row-sm">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="First_Name">Warranty</label>
+                                    <input type="text" class="form-control" id="First_Name" placeholder="Enter warranty in months">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-sm text-center">
+                        <div class="col-sm-3">
+                        </div>
+                        <div class="col-sm-3">
+                            <button class="btn btn-primary btn-block">Submit</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <button class="btn btn-light btn-block">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Entry Code End-->
+
+    </div>
+</div>
+<h1>{{demo}}</h1>
+<!-- row closed -->
+
+@section scripts{
+    <!-- Internal Select2.min js -->
+    <script src="~/assets/plugins/select2/js/select2.min.js"></script>
+    <script src="~/assets/js/select2.js"></script>
+
+    <!--Internal  jquery-simple-datetimepicker js -->
+    <script src="~/assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+    <script src="~/assets/js/datePicker.js"></script>
+
+    <script src="~/Scripts/Angular/AssetManagement/JS/ApplyAsset.js"></script>
+}
+
+
